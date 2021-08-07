@@ -1,14 +1,11 @@
 // https://www.geeksforgeeks.org/find-the-missing-number/
 
-function solution(A) {
-  if (!A || A.length == 0) return 1;
-  let fullSum = 0;
-  let sum = 0;
-  for (i = 0; i <= A.length; i++) {
-    fullSum += i + 1;
-  }
-  for (i = 0; i < A.length; i++) {
-    sum += A[i];
-  }
-  return fullSum - sum;
+function solution(arr) {
+    let n = arr.length + 1
+    let total = n * (n + 1) / 2
+    let realTotal = 0
+    arr.forEach((item) => {
+        realTotal += item
+    })
+    return total - realTotal
 }
