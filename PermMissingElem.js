@@ -1,3 +1,5 @@
+// https://www.geeksforgeeks.org/find-the-missing-number/
+
 function solution(A) {
   if (!A || A.length == 0) return 1;
   let fullSum = 0;
